@@ -9,6 +9,7 @@ export default function App() {
         title={user.name}
         tag={user.tag}
         location={user.location}
+        stats={user.stats}
       />
     </div>
   );
