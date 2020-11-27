@@ -1,3 +1,32 @@
 .statistics {
   background-color: cornsilk;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats {
+  display: flex;
+  padding-left: 0;
+  justify-content: center;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+}
+
+.label {
+  color: black;
+}
+
+.percentage {
+  color: rebeccapurple;
 }

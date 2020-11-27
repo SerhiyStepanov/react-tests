@@ -1,6 +1,7 @@
 import Profile from "./components/User";
 import Statistics from "./components/Statistics";
 import user from "./user-data.json";
+import statistics from "./statistical-data.json";
 
 export default function App() {
   return (
@@ -13,7 +14,11 @@ export default function App() {
         stats={user.stats}
       />
 
-      <Statistics />
+      <Statistics
+        key={statistics.map((el) => el.id)}
+        title={statistics.title}
+        stats={statistics}
+      />
     </div>
   );
 }
