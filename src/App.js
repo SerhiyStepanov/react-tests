@@ -14,11 +14,7 @@ export default function App() {
         stats={user.stats}
       />
 
-      <Statistics
-        key={statistics.map((el) => el.id)}
-        title={statistics.title}
-        stats={statistics}
-      />
+      <Statistics title="Upload stats" stats={statistics} />
     </div>
   );
 }
