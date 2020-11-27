@@ -1,4 +1,4 @@
-import Profile from "./components/user";
+import Profile from "./components/User";
 import user from "./user-data.json";
 
 export default function App() {

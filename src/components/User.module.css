@@ -1,0 +1,13 @@
+.name {
+  color: rebeccapurple;
+}
+
+.avatar {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+.profile {
+  background-color: gainsboro;
+}
