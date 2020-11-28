@@ -4,6 +4,8 @@
   justify-content: space-between;
   padding: 25px;
   margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
   width: 250px;
   border: 1px solid black;
   background-color: blanchedalmond;
@@ -13,11 +15,17 @@
   width: 16px;
   height: 16px;
   color: #000;
-  background-color: red;
   border-radius: 50%;
   border: 1px solid black;
 }
 
+.statusOn {
+  background-color: green;
+}
+
+.statusOff {
+  background-color: red;
+}
 .avatar {
   display: block;
 }
