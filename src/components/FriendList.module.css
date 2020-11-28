@@ -1,5 +1,3 @@
 .lists {
-  display: flex;
-  flex-direction: column;
-  background-color: gray;
+  display: block;
 }

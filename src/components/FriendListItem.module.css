@@ -1,12 +1,27 @@
 .item {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  margin-bottom: 15px;
+  width: 250px;
+  border: 1px solid black;
+  background-color: blanchedalmond;
 }
+
 .status {
-  background-color: hotpink;
+  width: 16px;
+  height: 16px;
+  color: #000;
+  background-color: red;
+  border-radius: 50%;
+  border: 1px solid black;
 }
+
 .avatar {
   display: block;
 }
+
 .name {
   color: #000;
 }
