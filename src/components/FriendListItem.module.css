@@ -8,12 +8,13 @@
   margin-right: auto;
   width: 250px;
   border: 1px solid black;
+  border-radius: 4px;
   background-color: blanchedalmond;
 }
 
 .status {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   color: #000;
   border-radius: 50%;
   border: 1px solid black;
@@ -26,10 +27,14 @@
 .statusOff {
   background-color: red;
 }
+
 .avatar {
   display: block;
+  max-width: 100%;
 }
 
 .name {
+  font-size: 18px;
+  font-weight: 600;
   color: #000;
 }

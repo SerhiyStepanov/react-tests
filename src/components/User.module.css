@@ -3,7 +3,11 @@
   padding: 10px 10px;
   margin-left: auto;
   margin-right: auto;
-  width: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 320px;
+  border: 1px solid black;
+  border-radius: 5px;
   background-color: gainsboro;
 }
 
@@ -16,6 +20,8 @@
 }
 
 .name {
+  font-size: 18px;
+  font-weight: 600;
   text-align: center;
   color: rebeccapurple;
 }
