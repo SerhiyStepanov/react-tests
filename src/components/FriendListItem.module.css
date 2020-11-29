@@ -12,19 +12,21 @@
   background-color: blanchedalmond;
 }
 
-.status {
+.activ {
   width: 18px;
   height: 18px;
   color: #000;
   border-radius: 50%;
   border: 1px solid black;
-}
-
-.statusOn {
   background-color: green;
 }
 
-.statusOff {
+.Off {
+  width: 18px;
+  height: 18px;
+  color: #000;
+  border-radius: 50%;
+  border: 1px solid black;
   background-color: red;
 }
 
