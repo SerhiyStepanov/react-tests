@@ -6,11 +6,8 @@ export default function FriendListItem({ avatar, name, isOnline, id }) {
   const OffLine = s.Off;
   return (
     <li className={s.item}>
-      {isOnline ? (
-        <span className={OnLine}></span>
-      ) : (
-        <span className={OffLine}></span>
-      )}
+      <span className={isOnline ? OnLine : OffLine}></span>
+
       <img className={s.avatar} src={avatar} alt={name} width="48" />
       <p className={s.name}>{name}</p>
     </li>
