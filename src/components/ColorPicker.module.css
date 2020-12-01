@@ -1,0 +1,33 @@
+.ColorPicker {
+  width: 480px;
+  padding: 16px;
+  border: 1px solid black;
+}
+
+.ColorPickerTitle {
+  color: #343434;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.ColorPickerContainer {
+  display: flex;
+}
+
+.ColorPickerOption {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  margin: 6px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 250 linear;
+}
+
+.ColorPickerActiv {
+  transform: scale(1.1);
+}
