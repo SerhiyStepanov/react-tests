@@ -4,12 +4,12 @@
 // import TransactionHistory from "./components/TransactionHistory";
 // import Counter from "./components/Counter";
 // import Dropdown from "./components/Dropdown";
-import ColorPicker from "./components/ColorPicker";
+// import ColorPicker from "./components/ColorPicker";
 // import user from "./user-data.json";
 // import statistics from "./statistical-data.json";
 // import friends from "./friends-data.json";
 // import transactions from "./transactions-data.json";
-import colorPicker from "./components/ColorPicker.json";
+// import colorPicker from "./components/ColorPicker.json";
 
 export default function App() {
   return (
@@ -32,7 +32,7 @@ export default function App() {
 
       {/* <Dropdown /> */}
 
-      <ColorPicker options={colorPicker} />
+      {/* <ColorPicker options={colorPicker} /> */}
     </div>
   );
 }
