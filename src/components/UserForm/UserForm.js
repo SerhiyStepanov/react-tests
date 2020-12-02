@@ -8,24 +8,42 @@ export default class UserForm extends Component {
     email: "",
   };
 
-  handleNameChange = (eve) => {
+  handlerNameChange = (e) => {
+    const { name, value } = e.currentTarget;
     this.setState({
-      [eve.currentTarget.name]: [eve.currentTarget.value],
+      [name]: value,
+    });
+  };
+
+  handlerSubmit = (e) => {
+    e.preventDefault();
+    // console.log(this.state);
+    this.props.onFormSubmit(this.state);
+    this.reset();
+  };
+
+  reset = () => {
+    this.setState({
+      name: "",
+      tel: "",
+      email: "",
     });
   };
 
   render() {
     return (
-      <div>
+      <div className={s.container}>
         Form
-        <form className={s.container}>
+        <form onSubmit={this.handlerSubmit}>
           <label htmlFor="" className={s.formLabel}>
             Name
             <input
               type="text"
               name="name"
+              placeholder="Name"
+              className={s.formInput}
               value={this.state.name}
-              onChange={this.handleNameChange}
+              onChange={this.handlerNameChange}
             />
           </label>
 
@@ -34,8 +52,10 @@ export default class UserForm extends Component {
             <input
               type="tel"
               name="tel"
+              placeholder="Telephone number"
+              className={s.formInput}
               value={this.state.tel}
-              onChange={this.handleNameChange}
+              onChange={this.handlerNameChange}
             />
           </label>
 
@@ -44,10 +64,20 @@ export default class UserForm extends Component {
             <input
               type="email"
               name="email"
+              placeholder="Email"
+              className={s.formInput}
               value={this.state.email}
-              onChange={this.handleNameChange}
+              onChange={this.handlerNameChange}
             />
           </label>
+
+          <button
+            type="submit"
+            className={s.submitBtn}
+            disabled={this.state.name === "" || this.state.email === ""}
+          >
+            отправить
+          </button>
         </form>
       </div>
     );
