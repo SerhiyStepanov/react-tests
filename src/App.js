@@ -5,7 +5,8 @@
 // import Counter from "./components/Counter";
 // import Dropdown from "./components/Dropdown";
 // import ColorPicker from "./components/ColorPicker";
-import AppUserForm from "./components/UserForm/AppUserForm";
+// import AppUserForm from "./components/UserForm/AppUserForm";
+import AppFeedback from "./components/Feedback/AppFeedback";
 // import user from "./user-data.json";
 // import statistics from "./statistical-data.json";
 // import friends from "./friends-data.json";
@@ -35,7 +36,9 @@ export default function App() {
 
       {/* <ColorPicker options={colorPicker} /> */}
 
-      <AppUserForm />
+      {/* <AppUserForm /> */}
+
+      <AppFeedback />
     </div>
   );
 }
