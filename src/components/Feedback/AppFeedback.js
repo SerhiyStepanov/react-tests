@@ -7,7 +7,6 @@ export default class AppFeedback extends Component {
     neutral: 0,
     bad: 0,
   };
-
   incrementGood = (e) => {
     this.setState((prevState) => {
       return {
@@ -31,7 +30,6 @@ export default class AppFeedback extends Component {
       };
     });
   };
-
   countTotalFeedback = () => {
     const values = Object.values(this.state);
     let total = 0;
@@ -42,7 +40,12 @@ export default class AppFeedback extends Component {
   };
 
   countPositiveFeedbackPercentage = () => {
-    console.log();
+    const values = Object.values(this.state);
+    let total = 0;
+    for (const value of values) {
+      total += value;
+    }
+    return Math.round(Number.parseFloat(100 / total) * [this.state.good]);
   };
 
   render() {
@@ -53,6 +56,7 @@ export default class AppFeedback extends Component {
           <button type="button" className={s.btn} onClick={this.incrementGood}>
             good
           </button>
+
           <button
             type="button"
             className={s.btn}
@@ -60,6 +64,7 @@ export default class AppFeedback extends Component {
           >
             neutral
           </button>
+
           <button type="button" className={s.btn} onClick={this.incrementBad}>
             bad
           </button>
@@ -67,23 +72,29 @@ export default class AppFeedback extends Component {
 
         <div>
           <h2 className={s.title}>Statistics</h2>
-          <ul>
-            <li>
-              <p className={s.text}>Good : {this.state.good}</p>
-            </li>
-            <li>
-              <p className={s.text}>Neutral : {this.state.neutral}</p>
-            </li>
-            <li>
-              <p className={s.text}>Bad : {this.state.bad} </p>
-            </li>
-            <li>
-              <p className={s.text}>Total : {this.countTotalFeedback()} </p>
-            </li>
-            <li>
-              <p className={s.text}>Positive feedback : %</p>
-            </li>
-          </ul>
+          {this.countTotalFeedback() === 0 ? (
+            "No feedback given"
+          ) : (
+            <ul>
+              <li>
+                <p className={s.text}>Good : {this.state.good}</p>
+              </li>
+              <li>
+                <p className={s.text}>Neutral : {this.state.neutral}</p>
+              </li>
+              <li>
+                <p className={s.text}>Bad : {this.state.bad} </p>
+              </li>
+              <li>
+                <p className={s.text}>Total : {this.countTotalFeedback()} </p>
+              </li>
+              <li>
+                <p className={s.text}>
+                  Positive feedback : {this.countPositiveFeedbackPercentage()} %
+                </p>
+              </li>
+            </ul>
+          )}
         </div>
       </div>
     );
