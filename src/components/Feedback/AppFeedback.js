@@ -15,6 +15,36 @@ export default class AppFeedback extends Component {
       };
     });
   };
+
+  incrementNeutral = (e) => {
+    this.setState((prevState) => {
+      return {
+        neutral: prevState.neutral + 1,
+      };
+    });
+  };
+
+  incrementBad = (e) => {
+    this.setState((prevState) => {
+      return {
+        bad: prevState.bad + 1,
+      };
+    });
+  };
+
+  countTotalFeedback = () => {
+    const values = Object.values(this.state);
+    let total = 0;
+    for (const value of values) {
+      total += value;
+    }
+    return total;
+  };
+
+  countPositiveFeedbackPercentage = () => {
+    console.log();
+  };
+
   render() {
     return (
       <div>
@@ -23,10 +53,14 @@ export default class AppFeedback extends Component {
           <button type="button" className={s.btn} onClick={this.incrementGood}>
             good
           </button>
-          <button type="button" className={s.btn} onClick={this.increment}>
+          <button
+            type="button"
+            className={s.btn}
+            onClick={this.incrementNeutral}
+          >
             neutral
           </button>
-          <button type="button" className={s.btn} onClick={this.increment}>
+          <button type="button" className={s.btn} onClick={this.incrementBad}>
             bad
           </button>
         </div>
@@ -38,13 +72,13 @@ export default class AppFeedback extends Component {
               <p className={s.text}>Good : {this.state.good}</p>
             </li>
             <li>
-              <p className={s.text}>Neutral :</p>
+              <p className={s.text}>Neutral : {this.state.neutral}</p>
             </li>
             <li>
-              <p className={s.text}>Bad :</p>
+              <p className={s.text}>Bad : {this.state.bad} </p>
             </li>
             <li>
-              <p className={s.text}>Total :</p>
+              <p className={s.text}>Total : {this.countTotalFeedback()} </p>
             </li>
             <li>
               <p className={s.text}>Positive feedback : %</p>
