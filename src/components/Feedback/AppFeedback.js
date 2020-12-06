@@ -4,10 +4,6 @@ import Statistics from "./Statistics";
 import FeedbackOptions from "./FeedbackOptions";
 
 export default class AppFeedback extends Component {
-  static defaultProps = {
-    total: 0,
-  };
-
   state = {
     good: 0,
     neutral: 0,

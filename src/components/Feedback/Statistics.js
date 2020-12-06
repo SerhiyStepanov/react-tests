@@ -6,8 +6,8 @@ export default function Statistics({
   good,
   neutral,
   bad,
-  total,
-  positivePercentage,
+  total = 0,
+  positivePercentage = 0,
 }) {
   return (
     <Fragment>
