@@ -1,33 +1,26 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import s from "./Feedback.module.css";
 
-export default function FeedbackOptions({
-  incrementGood,
-  incrementNeutral,
-  incrementBad,
-}) {
+export default function FeedbackOptions({ onLeaveFeedback, options }) {
   return (
-    <Fragment>
-      <div className={s.btnContainer}>
-        <button type="button" className={s.btn} onClick={incrementGood}>
-          good
-        </button>
-
-        <button type="button" className={s.btn} onClick={incrementNeutral}>
-          neutral
-        </button>
-
-        <button type="button" className={s.btn} onClick={incrementBad}>
-          bad
-        </button>
-      </div>
-    </Fragment>
+    <ul className={s.btnContainer}>
+      {options.map((el) => (
+        <li key={el}>
+          <button
+            type="button"
+            className={s.btn}
+            onClick={() => onLeaveFeedback(el)}
+          >
+            {el}
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 }
 
 FeedbackOptions.propTypes = {
-  incrementGood: PropTypes.func,
-  incrementNeutral: PropTypes.func,
-  incrementBad: PropTypes.func,
+  increment: PropTypes.func,
+  options: PropTypes.array,
 };

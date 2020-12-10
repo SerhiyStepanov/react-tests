@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Section from "./Section";
 import Statistics from "./Statistics";
 import FeedbackOptions from "./FeedbackOptions";
+// import { number } from "prop-types";
 
 export default class AppFeedback extends Component {
   state = {
@@ -10,46 +11,23 @@ export default class AppFeedback extends Component {
     bad: 0,
   };
 
-  incrementGood = (e) => {
-    this.setState((prevState) => {
-      return {
-        good: prevState.good + 1,
-      };
-    });
-  };
-
-  incrementNeutral = (e) => {
-    this.setState((prevState) => {
-      return {
-        neutral: prevState.neutral + 1,
-      };
-    });
-  };
-
-  incrementBad = (e) => {
-    this.setState((prevState) => {
-      return {
-        bad: prevState.bad + 1,
-      };
-    });
+  addFeedback = (el) => {
+    console.log(el);
+    this.setState((prevState) => ({
+      [el]: prevState[el] + 1,
+    }));
   };
 
   countTotalFeedback = () => {
-    const values = Object.values(this.state);
-    let total = 0;
-    for (const value of values) {
-      total += value;
-    }
-    return total;
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
   };
 
   countPositiveFeedbackPercentage = () => {
     const values = Object.values(this.state);
-    let total = 0;
-    for (const value of values) {
-      total += value;
-    }
-    return Math.round(Number.parseFloat(100 / total) * [this.state.good]);
+    const total = values.reduce((acc, el) => acc + el);
+
+    return Math.round((100 / total) * [this.state.good]);
   };
 
   render() {
@@ -57,9 +35,8 @@ export default class AppFeedback extends Component {
       <div>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            incrementGood={this.incrementGood}
-            incrementNeutral={this.incrementNeutral}
-            incrementBad={this.incrementBad}
+            onLeaveFeedback={this.addFeedback}
+            options={Object.keys(this.state)}
           />
         </Section>
 
