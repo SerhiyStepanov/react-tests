@@ -1,14 +1,14 @@
 .title {
-  text-align: center;
+  margin-left: 20px;
 }
 
 .btnContainer {
-  display: flex;
-  justify-content: space-evenly;
+  margin-left: 20px;
 }
 
 .btn {
   padding: 6px 10px;
+  margin-right: 25px;
   cursor: pointer;
   border: none;
   outline-style: none;
