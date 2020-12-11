@@ -7,6 +7,7 @@
 // import ColorPicker from "./components/ColorPicker/ColorPicker";
 // import AppUserForm from "./components/UserForm/AppUserForm";
 // import AppFeedback from "./components/Feedback/AppFeedback";
+
 // import user from "./user-data.json";
 // import statistics from "./statistical-data.json";/
 // import friends from "./friends-data.json";
