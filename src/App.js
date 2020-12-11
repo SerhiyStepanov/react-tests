@@ -8,7 +8,7 @@
 // import AppUserForm from "./components/UserForm/AppUserForm";
 // import AppFeedback from "./components/Feedback/AppFeedback";
 // import user from "./user-data.json";
-// import statistics from "./statistical-data.json";
+// import statistics from "./statistical-data.json";/
 // import friends from "./friends-data.json";
 // import transactions from "./transactions-data.json";
 // import colorPicker from "./components/ColorPicker/ColorPicker.json";
@@ -22,23 +22,15 @@ export default function App() {
         tag={user.tag}
         location={user.location}
         stats={user.stats}
-      />
-
-      <Statistics title="Upload stats" stats={statistics} />
-
-      <FriendList friends={friends} />
-
-      <TransactionHistory items={transactions} />
-
-      <Counter />
-
-      <Dropdown />
-
-      <ColorPicker options={colorPicker} />
-
-      <AppUserForm />
-
-      <AppFeedback /> */}
+      /> */}
+      {/* <Statistics title="Upload stats" stats={statistics} /> */}
+      {/* <FriendList friends={friends} /> */}
+      {/* <TransactionHistory items={transactions} /> */}
+      {/* <Counter /> */}
+      {/* <Dropdown /> */}
+      {/* <ColorPicker options={colorPicker} /> */}
+      {/* <AppUserForm /> */}
+      {/* <AppFeedback /> */}
     </div>
   );
 }

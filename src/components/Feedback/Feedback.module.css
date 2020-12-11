@@ -14,7 +14,14 @@
   border: none;
   outline-style: none;
   border-radius: 4px;
+  color: #fff;
   background-color: cornflowerblue;
+}
+
+.btn:hover,
+.btn:focus {
+  color: cornflowerblue;
+  background-color: #fff;
 }
 
 li {
@@ -24,4 +31,9 @@ li {
 .text {
   font-size: 16px;
   font-weight: 600;
+}
+
+.message {
+  margin-left: 20px;
+  color: cornflowerblue;
 }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Section from "./Section";
 import Statistics from "./Statistics";
 import FeedbackOptions from "./FeedbackOptions";
-// import { number } from "prop-types";
+import s from "./Feedback.module.css";
 
 export default class AppFeedback extends Component {
   state = {
@@ -25,7 +25,7 @@ export default class AppFeedback extends Component {
 
   countPositiveFeedbackPercentage = () => {
     const values = Object.values(this.state);
-    const total = values.reduce((acc, el) => acc + el);
+    const total = values.reduce((acc, el) => acc + el, 0);
 
     return Math.round((100 / total) * [this.state.good]);
   };
@@ -42,7 +42,7 @@ export default class AppFeedback extends Component {
 
         <Section title="Statistics">
           {this.countTotalFeedback() === 0 ? (
-            "No feedback given"
+            <p className={s.message}>No feedback given</p>
           ) : (
             <Statistics
               good={this.state.good}
