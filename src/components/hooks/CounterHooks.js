@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FiThumbsDown, FiThumbsUp } from "react-icons/fi";
 
 export default function CounterHook() {
   const [incrementA, setAIncrement] = useState(0);
@@ -21,21 +22,37 @@ export default function CounterHook() {
   return (
     <>
       <button
-        style={{ backgroundColor: "#2f4f6f", padding: "10px 20px" }}
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          color: "#ffffff",
+          backgroundColor: "#2f4f6f",
+          padding: "10px 20px",
+          cursor: "pointer",
+        }}
         type="button"
         onClick={handleAIncrement}
       >
         click {incrementA}
+        <FiThumbsUp style={{ marginLeft: "10px", fill: "#ffffff" }} />
       </button>
 
-      <span>{total}</span>
+      <span style={{ marginLeft: "20px", marginRight: "20px" }}>{total}</span>
 
       <button
-        style={{ backgroundColor: "#2f4f6f", padding: "10px 20px" }}
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          color: "#ffffff",
+          backgroundColor: "#2f4f6f",
+          padding: "10px 20px",
+          cursor: "pointer",
+        }}
         type="button"
         onClick={handleBIcrement}
       >
         click {incrementB}
+        <FiThumbsDown style={{ marginLeft: "10px", fill: "#ffffff" }} />
       </button>
     </>
   );
