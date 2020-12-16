@@ -7,6 +7,7 @@
 // import ColorPicker from "./components/ColorPicker/ColorPicker";
 // import AppUserForm from "./components/UserForm/AppUserForm";
 // import AppFeedback from "./components/Feedback/AppFeedback";
+import CounterHook from "./components/hooks";
 
 // import user from "./user-data.json";
 // import statistics from "./statistical-data.json";/
@@ -32,6 +33,7 @@ export default function App() {
       {/* <ColorPicker options={colorPicker} /> */}
       {/* <AppUserForm /> */}
       {/* <AppFeedback /> */}
+      <CounterHook />
     </div>
   );
 }
