@@ -8,7 +8,7 @@
 // import AppUserForm from "./components/UserForm/AppUserForm";
 // import AppFeedback from "./components/Feedback/AppFeedback";
 // import CounterHook from "./components/hooks";
-// import SignupForm from "./components/hooks/SignupForm";
+import SignupForm from "./components/hooks/SignupForm";
 
 // import user from "./user-data.json";
 // import statistics from "./statistical-data.json";/
@@ -35,7 +35,7 @@ export default function App() {
       {/* <AppUserForm /> */}
       {/* <AppFeedback /> */}
       {/* <CounterHook /> */}
-      {/* <SignupForm /> */}
+      <SignupForm />
     </div>
   );
 }
