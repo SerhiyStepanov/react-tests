@@ -33,38 +33,38 @@ export default class UserForm extends Component {
   render() {
     return (
       <div className={s.container}>
-        Form
+        <p className={s.title}>Registration</p>
         <form onSubmit={this.handlerSubmit}>
-          <label htmlFor="" className={s.formLabel}>
+          <label className={s.formLabel}>
             Name
             <input
               type="text"
               name="name"
-              placeholder="Name"
+              placeholder="Enter name"
               className={s.formInput}
               value={this.state.name}
               onChange={this.handlerNameChange}
             />
           </label>
 
-          <label htmlFor="" className={s.formLabel}>
-            tel
+          <label className={s.formLabel}>
+            Telephone
             <input
               type="tel"
               name="tel"
-              placeholder="Telephone number"
+              placeholder="Enter number"
               className={s.formInput}
               value={this.state.tel}
               onChange={this.handlerNameChange}
             />
           </label>
 
-          <label htmlFor="" className={s.formLabel}>
-            email
+          <label className={s.formLabel}>
+            Email
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder="Enter email"
               className={s.formInput}
               value={this.state.email}
               onChange={this.handlerNameChange}
@@ -76,7 +76,7 @@ export default class UserForm extends Component {
             className={s.submitBtn}
             disabled={this.state.name === "" || this.state.email === ""}
           >
-            отправить
+            send
           </button>
         </form>
       </div>

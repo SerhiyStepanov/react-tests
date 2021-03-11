@@ -5,10 +5,10 @@
 // import Counter from "./components/Counter/Counter";
 // import Dropdown from "./components/Dropdown/Dropdown";
 // import ColorPicker from "./components/ColorPicker/ColorPicker";
-// import AppUserForm from "./components/UserForm/AppUserForm";
+import AppUserForm from "./components/UserForm/AppUserForm";
 // import AppFeedback from "./components/Feedback/AppFeedback";
-// import CounterHook from "./components/hooks";
-import SignupForm from "./components/hooks/SignupForm";
+// import CounterHook from "./components/hooks/CounterHooks";
+// import SignupForm from "./components/hooks/SignupForm";
 
 // import user from "./user-data.json";
 // import statistics from "./statistical-data.json";/
@@ -32,10 +32,10 @@ export default function App() {
       {/* <Counter /> */}
       {/* <Dropdown /> */}
       {/* <ColorPicker options={colorPicker} /> */}
-      {/* <AppUserForm /> */}
+      <AppUserForm />
       {/* <AppFeedback /> */}
       {/* <CounterHook /> */}
-      <SignupForm />
+      {/* <SignupForm /> */}
     </div>
   );
 }
