@@ -29,12 +29,19 @@ form {
   padding: 4px;
   border: none;
   outline: 1px solid rgb(129, 117, 207);
-  border-radius: 2px;
 }
 
 .formInput:focus {
   outline: none;
   border-bottom: 1px solid rgb(129, 117, 207);
+}
+
+/* .formInput:valid {
+  border-bottom: 1px solid greenyellow;
+} */
+
+.formInput:invalid {
+  border-bottom: 1px solid red;
 }
 
 /* .submitBtn {

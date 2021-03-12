@@ -52,10 +52,12 @@ export default class UserForm extends Component {
             <input
               type="tel"
               name="tel"
-              placeholder="Enter number"
+              placeholder="XXX XXX XXXX"
               className={s.formInput}
               value={this.state.tel}
               onChange={this.handlerNameChange}
+              // pattern="\d{10}"
+              pattern="\d{3} \d{3} \d{4}"
             />
           </label>
 
