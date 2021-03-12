@@ -67,8 +67,8 @@ form {
 }
 
 .submitBtn {
-  /* animation: bouncing 0.5s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate
-    both; */
+  animation: bouncing 0.5s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate
+    both;
 
   display: inline-block;
   position: relative;
