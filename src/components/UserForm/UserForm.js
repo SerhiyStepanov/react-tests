@@ -34,7 +34,7 @@ export default class UserForm extends Component {
     return (
       <div className={s.container}>
         <p className={s.title}>Registration</p>
-        <form onSubmit={this.handlerSubmit}>
+        <form onSubmit={this.handlerSubmit} className={s.form}>
           <label className={s.formLabel}>
             Name
             <input
@@ -78,7 +78,7 @@ export default class UserForm extends Component {
             className={s.submitBtn}
             disabled={this.state.name === "" || this.state.email === ""}
           >
-            send
+            submit
           </button>
         </form>
       </div>
