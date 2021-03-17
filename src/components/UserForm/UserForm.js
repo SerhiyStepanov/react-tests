@@ -78,7 +78,7 @@ export default class UserForm extends Component {
             className={s.submitBtn}
             disabled={this.state.name === "" || this.state.email === ""}
           >
-            submit
+            send
           </button>
         </form>
       </div>
