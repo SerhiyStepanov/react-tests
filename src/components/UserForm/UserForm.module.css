@@ -1,12 +1,33 @@
 .container {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin: 20px;
+  border: 1px solid rgb(55, 55, 70);
+}
+
+.thumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 15px;
+
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(205, 155, 255),
+    rgb(205, 155, 255) 15px,
+    rgb(255, 255, 200) 15px,
+    rgb(255, 255, 200) 30px
+  );
 }
 
 .title {
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   line-height: 1.2;
+  color: rgb(55, 55, 70);
 }
 
 .form {
@@ -14,37 +35,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .formLabel {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 320px;
-  margin: 10px;
-  color: rgb(129, 117, 207);
+  width: 300px;
+  margin-bottom: 10px;
+  color: rgb(55, 55, 70);
 }
 
 .formInput {
-  display: block;
+  display: flex;
   margin-left: 10px;
   padding: 4px;
-  border: none;
-  outline: 1px solid rgb(129, 117, 207);
+  border: 1px solid transparent;
+  outline: 1px solid rgb(127, 117, 207);
 }
 
 .formInput:focus {
   outline: 1px solid transparent;
-  border-bottom: 1px solid rgb(129, 117, 207);
+  border-bottom: 1px solid rgb(127, 117, 207);
 }
 
 .formInput:invalid {
   border-bottom: 1px solid red;
 }
 
-
 /* =======   BUTTON   ======== */
-
 
 @keyframes bouncing {
   0% {
@@ -53,7 +73,7 @@
   }
   100% {
     bottom: 50px;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -68,22 +88,27 @@
   padding: 0;
   margin-top: 50px;
   width: 70px;
-  height:70px ;
+  height: 70px;
   font-weight: 600;
   text-transform: uppercase;
   border: 2px solid transparent;
   border-radius: 50%;
   outline: none;
   color: white;
-  background: rgb(129, 117, 207);
+  background: rgb(127, 117, 207);
   cursor: pointer;
 }
 
 .submitBtn:hover,
 .submitBtn:focus {
-border: 2px solid limegreen;
-color:limegreen;
-background-color: rgb(129, 117, 207);
+  border: 2px solid #00cc00;
+  color: #00cc00;
+  /* background-color: rgb(129, 117, 207); */
+  background: linear-gradient(
+    to bottom,
+    rgb(127, 117, 207) 0%,
+    rgb(255, 255, 155) 100%
+  );
 }
 
 /* .submitBtn {
@@ -95,5 +120,11 @@ background-color: rgb(129, 117, 207);
   outline: none;
   cursor: pointer;
   color: rgb(129, 117, 207) ;
-  background-color: rgba(129, 117, 207, 0.9);
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(205, 155, 255),
+    rgb(205, 155, 255) 15px,
+    rgb(255, 255, 200) 15px,
+    rgb(255, 255, 200) 30px
+  );
 } */

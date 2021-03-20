@@ -33,7 +33,9 @@ export default class UserForm extends Component {
   render() {
     return (
       <div className={s.container}>
-        <p className={s.title}>Registration</p>
+        <div className={s.thumb}>
+          <p className={s.title}>Registration</p>
+        </div>
         <form onSubmit={this.handlerSubmit} className={s.form}>
           <label className={s.formLabel}>
             Name
@@ -66,6 +68,7 @@ export default class UserForm extends Component {
             <input
               type="email"
               name="email"
+              autoComplete="off"
               placeholder="Enter email"
               className={s.formInput}
               value={this.state.email}
