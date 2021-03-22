@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import UserForm from "./UserForm";
+import price from "../../static-data-price.json";
 
 // export default class AppUserForm extends Component {
 //   handlerFormSubmit = (data) => {
