@@ -73,7 +73,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   100% {
-    bottom: 50px;
+    bottom: 40px;
     box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
   }
 }
@@ -90,7 +90,7 @@
   margin-top: 50px;
   width: 70px;
   height: 70px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   border: 2px solid transparent;
   border-radius: 50%;
