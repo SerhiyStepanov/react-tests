@@ -16,6 +16,8 @@ import AppUserForm from "./components/UserForm/AppUserForm";
 // import transactions from "./transactions-data.json";
 // import colorPicker from "./components/ColorPicker/ColorPicker.json";
 
+import Contacts from "../src/Copy";
+
 export default function App() {
   return (
     <div>
@@ -36,6 +38,7 @@ export default function App() {
       {/* <AppFeedback /> */}
       {/* <CounterHook /> */}
       {/* <SignupForm /> */}
+      <Contacts />
     </div>
   );
 }
