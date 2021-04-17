@@ -55,6 +55,10 @@
   outline: 1px solid rgb(127, 117, 207);
 }
 
+.formInput::placeholder {
+  color: rgb(245, 138, 170);
+}
+
 .formInput:focus {
   outline: 1px solid transparent;
   border-bottom: 1px solid rgb(127, 117, 207);
